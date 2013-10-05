@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
-schools = School.create([{ name
+schools = School.create([{ name: 'cool school', zip: '10014'}])
