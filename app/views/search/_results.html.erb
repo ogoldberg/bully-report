@@ -1,3 +1,5 @@
+<ul>
 <% @schools.each do |school| %>
-  <%= school.name %>
+  <li><%= link_to school.name, school %></li>
 <% end %>
+</ul>
