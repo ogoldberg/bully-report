@@ -1,6 +1,28 @@
 <%= form_tag search_index_path, method: :get do %>
-  <%= text_field_tag :zip, params[:school] %>
-  <%= submit_tag "Search", name: nil %>
+  <input id="searchField" name="name" type="text" class="input-medium search-query">
+    <button type="submit" class="btn">Search</button><br/>
+    <label class="radio inline">
+        <input type="radio" name="radialSearchChoices" id="optionsName" value="name" checked>
+        Name
+    </label>
+    <label class="radio inline">
+        <input type="radio" name="radialSearchChoices" id="optionsZip" value="zip">
+        Zip Code
+    </label>
+    <label class="radio inline">
+        <input type="radio" name="radialSearchChoices" id="optionsLocation" value="location">
+        Location
+    </label>
+    <label class="radio inline">
+        <input type="radio" name="radialSearchChoices" id="optionsAddress" value="address">
+        Address
+    </label>
+    <div id="hiddenLocationValues">
+        <!-- store geolocation here -->
+    </div>
 <% end %>
-
+<p>
+Search Results:
+<hr/>
+</p>
 <%= render 'search/results' %>
