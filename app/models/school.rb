@@ -16,6 +16,7 @@
 #
 
 class School < ActiveRecord::Base
+  has_many :reports
   def self.parse_xml(school_xml)
     School.new({
       external_id: school_xml.xpath("id").text,
