@@ -9,5 +9,63 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap
+ *= require bootstrap-responsive
  *= require_tree .
  */
+
+/*
+    All standard CSS goes here, outside a media query
+*/
+body {
+    padding-top: 60px;
+}
+/* make jumbotron centered */
+.jumbotron {
+    text-align: center;
+}
+/* make jumbotron <p> tags left aligned */
+.jumbotron p {
+    text-align:left;
+}
+/* float rows on desktop */
+.row {
+    float:left;
+}
+
+/*
+    Media query for Mobile Phones
+    All CSS for mobile phones goes here
+*/
+@media (max-width: 480px) {
+    .jumbotron{
+        text-align:center;
+    }
+    .row {
+        float:none;
+    }
+}
+
+/*
+    Media query for Tablet Screens
+    All CSS for tablets goes here
+*/
+@media (min-width: 768px) and (max-width: 979px) {
+    
+}
+
+/* 
+    Media query for smaller tablets
+    All CSS for anything between phone and tablet goes here
+*/
+@media (max-width: 767px) {
+    
+}
+
+
+/*
+    Media query for Large screens on Desktop or TVs
+*/
+@media (min-width: 1200px) {
+    
+}

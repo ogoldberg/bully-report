@@ -31,5 +31,5 @@ production:
   encoding: unicode
   database: bully_report_production
   pool: 5
-  username: codelitt
-  password:
+  username: postgres
+  password: postgres
