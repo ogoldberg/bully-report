@@ -9,7 +9,7 @@ development:
   encoding: unicode
   database: bully_report_development
   pool: 5
-  username: codelitt
+  username: Ben
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -21,7 +21,7 @@ test:
   encoding: unicode
   database: bully_report_test
   pool: 5
-  username: codelitt
+  username: Ben
   password:
 
 
