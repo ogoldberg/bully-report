@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: schools
+#
+#  id          :integer          not null, primary key
+#  external_id :integer
+#  name        :string(255)
+#  grades      :string(255)
+#  address     :string(255)
+#  phone       :string(255)
+#  zip         :integer
+#  lat         :float
+#  lng         :float
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  grades: MyString
+  address: MyString
+  phone: MyString
+  zip: 
+  lat: 1.5
+  lng: 1.5
+
+two:
+  name: MyString
+  grades: MyString
+  address: MyString
+  phone: MyString
+  zip: 
+  lat: 1.5
+  lng: 1.5
