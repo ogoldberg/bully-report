@@ -45,4 +45,5 @@ group :development do
   gem 'binding_of_caller'
   gem 'debugger'
   gem 'quiet_assets'
+  gem 'faker'
 end
