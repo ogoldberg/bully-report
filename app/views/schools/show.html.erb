@@ -1,28 +1,6 @@
 <!-- TODO: Move this to Schools index and use this page to graph school bullying results -->
 <!-- TODO: If no data is available, show a message saying no data is available for this school -->
-<h1>Schools</h1>
-<p>Find your school by searching for it!</p>
-
-<form id="search-form" class="form-search">
-    <input id="searchField" type="text" class="input-medium search-query">
-    <button type="submit" class="btn">Search</button><br/>
-    <label class="radio">
-        <input type="radio" name="radialSearchChoices" id="optionsName" value="Name" checked>
-        Name
-    </label>
-    <label class="radio">
-        <input type="radio" name="radialSearchChoices" id="optionsZip" value="Zip">
-        Zip Code
-    </label>
-    <label class="radio">
-        <input type="radio" name="radialSearchChoices" id="optionsLocation" value="Location">
-        Location
-    </label>
-    <label class="radio">
-        <input type="radio" name="radialSearchChoices" id="optionsAddress" value="Address">
-        Address
-    </label>
-    <div id="hiddenLocationValues">
-        <!-- store geolocation here -->
-    </div>
-</form>
+<h1><%= @school.name %></h1>
+Grades: <%= @school.grades %><br />
+<%= @school.address.html_safe %><br />
+<%= @school.phone %>
