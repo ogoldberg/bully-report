@@ -5,6 +5,7 @@ BullyReport::Application.routes.draw do
   get '/about' => 'static_pages#about'
   resources :search, :only => [:index, :render]
   resources :schools, :only => [:index, :show]
+  resources :reports,   :only => [:index, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -59,8 +60,4 @@ BullyReport::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-resources :schools do
-    resources :id
-end
-resources :report
 end
