@@ -55,4 +55,8 @@ BullyReport::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+resources :schools do
+    resources :id
+end
+resources :report
 end
