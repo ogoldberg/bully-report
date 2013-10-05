@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    @schools = School.where('zip LIKE ? OR address ilike ? OR name ilike ? OR (lat ilike ? AND long ilike ?)', '%#{search}', '%#{search}', '%#{search}', '%#{search}', '%#{search}')  
+    @schools = School.where('zip = ? OR address ilike ? OR name ilike ? OR (lat = ? AND lng = ?)', params[:zip], '%#{search}%', '%#{search}%', params[:lat], params[:lng])  
   end
 end

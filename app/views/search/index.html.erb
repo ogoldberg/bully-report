@@ -1,6 +1,6 @@
 <%= form_tag search_index_path, method: :get do %>
-  <%= text_field_tag :school, params[:search] %>
+  <%= text_field_tag :zip, params[:school] %>
   <%= submit_tag "Search", name: nil %>
 <% end %>
 
-<%= render :results %>
+<%= render 'search/results' %>
