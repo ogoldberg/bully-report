@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20131005044717) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "schools", force: true do |t|
     t.integer  "external_id"
     t.string   "name"
