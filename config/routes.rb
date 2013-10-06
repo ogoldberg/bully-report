@@ -5,7 +5,8 @@ BullyReport::Application.routes.draw do
   get '/about' => 'static_pages#about'
   resources :search, :only => [:index, :render]
   resources :schools, :only => [:index, :show]
-  resources :reports,   :only => [:index, :show]
+  match 'report', to: 'reports#new', via: [:get]
+  resources :reports
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
