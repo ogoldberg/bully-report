@@ -1,4 +1,4 @@
-<%= form_for @report, url: reports_path, html: { method: :post } do |f| %>
+<%= form_for @report, :url => { :action => "create" } do |f| %>
   <h1>What happened?</h1>
   <%= f.radio_button :type_of_bullying, "physical" %>
   <%= f.label :type_of_bullying, "Physical violence" %>

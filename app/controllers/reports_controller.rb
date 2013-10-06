@@ -8,13 +8,20 @@ class ReportsController < ApplicationController
   end
 
   def new
-    @school = School.find_by_id(params[:id])
+    @school = School.find_by_id(params[:school_id])
     @report = Report.new
   end
 
   def create
-    @school = School.find_by_id(params[:id])
-    @report = Report.create(params[:report])
+    @school = School.find_by_id(params[:school_id])
+    @report = Report.create(report_params)
+    redirect_to '/'
+  end
+
+  private
+
+  def report_params
+    params.require(:report).permit(:school_id, :type_of_bullying, :person_told, :happened_to)
   end
 
 end
