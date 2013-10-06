@@ -1,5 +1,12 @@
 class SearchController < ApplicationController
   def index
-    @schools = School.where('zip = ? OR address ~* ? OR name ~* ? OR (lat = ? AND lng = ?)', params[:zip], params[:address], params[:name], params[:lat], params[:lng])  
+    lat = params[:lat].to_f
+    lng = params[:lng].to_f
+
+    if lat != 0 and lng != 0
+      @schools = School.within(4, :origin => [lat, lng]).order("name")
+    else
+      @schools = School.where('zip = ? OR address ~* ? OR name ~* ?', params[:zip], params[:address], params[:name])  
+    end
   end
 end
