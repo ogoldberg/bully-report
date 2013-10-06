@@ -4,8 +4,7 @@ BullyReport::Application.routes.draw do
   get '/help' => 'static_pages#help'
   get '/about' => 'static_pages#about'
   resources :search, :only => [:index, :render]
-  match 'reports/index', to: 'reports#index', via: [:get]
-  match 'report', to: 'reports#new', via: [:get]
+  match 'reports', to: 'reports#index', via: [:get]
   
   resources :schools, :only => [:index, :show] do
     resources :reports
