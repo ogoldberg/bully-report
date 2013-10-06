@@ -29,9 +29,10 @@
 
             <a name="forstudents"></a> <!-- anchor for students -->
 
-            <div class="span4"><a href="/map">
+            <div class="span4">
 
               <h2>Students</h2>
+              <a href="/map">
               <div class="thumbnail">
                 <%= image_tag('students.jpg') %> 
                 <div class="caption">
@@ -51,15 +52,16 @@
             <div class="span4">
 
               <h2>Parents</h2>
-              <div class="thumbnail">
-                <%= image_tag('parents.jpg') %> 
-                <div class="caption">
-                    <p>Stay informed so you can take action.</p>
+              <a href="/resources">
+                <div class="thumbnail">
+                    <%= image_tag('parents.jpg') %> 
+                    <div class="caption">
+                        <p>Stay informed so you can take action.</p>
+                    </div>
                 </div>
-              </div>
-
+            </a>
             </div> <!-- end span4 -->
-            
+            </a>
         </div><!-- end row#forParentsRow -->
 
         <div id="forTeachersRow" class="row">
@@ -69,13 +71,14 @@
             <div class="span4">
 
               <h2>Teachers</h2>
+              <a href="/resources">
               <div class="thumbnail parents">
                 <%= image_tag('teachers.jpg') %> 
                 <div class="caption">
                     <p>Education, early detection &amp; open discussions are key.</p>
                 </div>
               </div>
-
+          </a>
             </div> <!-- end span4 -->
             
         </div><!-- end row#forTeachersRow -->
