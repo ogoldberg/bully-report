@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131005224121) do
+ActiveRecord::Schema.define(version: 20131005232013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20131005224121) do
     t.string   "person_told"
     t.string   "rating"
     t.string   "grade"
+    t.integer  "school_id"
   end
 
   create_table "schools", force: true do |t|
