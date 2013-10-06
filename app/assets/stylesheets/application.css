@@ -8,9 +8,9 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require bootstrap
  *= require bootstrap-responsive
+ *= require_self
  *= require_tree .
  */
 
@@ -20,9 +20,28 @@
 body {
     padding-top: 60px;
     padding-bottom:60px;
+    background-color:#ecf8f7;
 }
-/* make jumbotron centered */
-
+#navbar{
+    background-color:#4da36e;
+    background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+  
+}
+.navbar-brand {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a, .navbar-inner .container .nav > li > a, .navbar-inner .container .brand {
+    color:  #fff;
+    text-shadow:none;
+    background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+.usreport {
+    margin-left:5px;
+}
 /* make jumbotron <p> tags left aligned */
 .jumbotron p {
     text-align:left;
@@ -51,6 +70,9 @@ body {
     All CSS for mobile phones goes here
 */
 @media (max-width: 480px) {
+    body {
+        padding-top: 0px;
+    }
     .jumbotron{
         text-align:center;
     }
@@ -64,7 +86,9 @@ body {
     All CSS for tablets goes here
 */
 @media (min-width: 768px) and (max-width: 979px) {
-    
+    body {
+        padding-top: 0px;
+    }
 }
 
 /* 
@@ -72,7 +96,9 @@ body {
     All CSS for anything between phone and tablet goes here
 */
 @media (max-width: 767px) {
-    
+    body {
+        padding-top: 0px;
+    }
 }
 
 

@@ -1,7 +1,14 @@
 
-<!-- TODO: Move this to Schools index and use this page to graph school bullying results -->
-<!-- TODO: If no data is available, show a message saying no data is available for this school -->
+<!-- TODO: Add graphs and nation school ranking -->
+<div id="singleSchoolContainer" class="container">
 <h1><%= @school.name %></h1>
-Grades: <%= @school.grades %><br />
-<%= @school.address.html_safe %><br />
-<%= @school.phone %>
+    <dl class="dl-horizontal">
+        <dt>Grades:</dt><dd> <%= @school.grades %> </dd>
+        <dt>Address:</dt><dd><%= @school.address.html_safe %></dd>
+        <dt>Phone:</dt><dd><%= @school.phone %></dd>
+        <dt>National Ranking:</dt><dd> - coming soon - </dd>
+        <dt>Physical Incidents:</dt><dd class="physicalBox leftIndent">30</dd>
+        <dt>Verbal Incidents:</dt><dd class="verbalBox leftIndent">70</dd>
+        <dt>Types of Bullying:</dt><dd><canvas id="schoolChart" width="300" height="300"></canvas></dd>
+    </dl>
+</div>
