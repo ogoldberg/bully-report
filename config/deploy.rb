@@ -15,7 +15,7 @@ set :applicationdir, "/var/www/whybully.com"
 set :scm, 'git'
 set :application, "whybully"
 set :repository,  "git@git.geekli.st:hack4goodnyc/bully-report.git"
-set :branch, 'master'
+set :branch, 'production'
 set :git_shallow_clone, 1
 set :scm_verbose, true
 set :deploy_via, :remote_cache
