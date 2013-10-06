@@ -2,9 +2,9 @@
   <%= form_for @report, :url => { :action => "create" } do |f| %>
     <h1>What happened?</h1>
     <%= f.radio_button :type_of_bullying, "physical" %>
-    <%= f.label :type_of_bullying, "Physical violence"#, :class => "btn btn-danger btn-large %>
+    <%= f.label :type_of_bullying, "Physical violence" %>
     <%= f.radio_button :type_of_bullying, "verbal" %>
-    <%= f.label :type_of_bullying, "Teasing"#, :class => "btn btn-danger btn-large" %>
+    <%= f.label :type_of_bullying, "Teasing" %>
     <h1>Who have you told?</h1>
     <%= f.radio_button :person_told, "teacher" %>
     <%= f.label :person_told, "A teacher" %>
