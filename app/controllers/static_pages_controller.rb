@@ -7,4 +7,14 @@ class StaticPagesController < ApplicationController
 
   def about
   end
+
+  def faq
+  end
+
+  def testimonials
+  end
+
+  def resources
+  end
+
 end
