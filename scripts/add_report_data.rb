@@ -16,6 +16,9 @@ def create_reports_for_school(school)
     report.save()
     i += 1
   end
+
+  school.num_reports = i
+  school.save()
 end
 
 # Load schools in batches of 1000 so we don't overload memory, otherwise we'd be

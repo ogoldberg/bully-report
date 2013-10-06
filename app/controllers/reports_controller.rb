@@ -15,6 +15,8 @@ class ReportsController < ApplicationController
   def create
     @school = School.find_by_id(params[:school_id])
     @report = Report.create(report_params)
+    @school.num_reports = @school.num_reports.to_i + 1
+    @school.save()
     redirect_to '/'
   end
 

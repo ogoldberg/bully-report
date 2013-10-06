@@ -36,16 +36,4 @@ class School < ActiveRecord::Base
     })
   end
 
-  # Allows us to set num_reports to the model dynamically when searching 
-  # - this is needed to show hitmaps
-  def num_results()
-    self.reports.count()
-  end
-
-  def as_json(*args)
-    super(*args).merge({
-        :num_results => self.num_results()
-    })
-  end
-
 end
