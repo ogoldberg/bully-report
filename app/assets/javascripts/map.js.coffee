@@ -79,7 +79,7 @@ $( ->
 
       heatmapData = []
       for i in data
-        heatmapData.push({location: new google.maps.LatLng(i['lat'], i['lng']), weight: i['num_results']})
+        heatmapData.push({location: new google.maps.LatLng(i['lat'], i['lng']), weight: i['num_reports']})
 
       @heatmap.setMap(null) if @heatmap isnt null
 
