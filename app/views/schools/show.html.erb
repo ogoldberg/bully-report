@@ -5,3 +5,4 @@
 Grades: <%= @school.grades %><br />
 <%= @school.address.html_safe %><br />
 <%= @school.phone %>
+<%= button_to "Report bullying", "#{@school.id}/reports/new", :class => "btn", :method => :get %>

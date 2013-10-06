@@ -1,0 +1,28 @@
+<%= form_for @report, url: reports_path, html: { method: :post } do |f| %>
+  <h1>What happened?</h1>
+  <%= f.radio_button :type_of_bullying, "physical" %>
+  <%= f.label :type_of_bullying, "Physical violence" %>
+  <%= f.radio_button :type_of_bullying, "verbal" %>
+  <%= f.label :type_of_bullying, "Teasing" %>
+  <h1>Who have you told?</h1>
+  <%= f.radio_button :person_told, "teacher" %>
+  <%= f.label :person_told, "A teacher" %>
+  <%= f.radio_button :person_told, "parent" %>
+  <%= f.label :person_told, "A parent" %>
+  <%= f.radio_button :person_told, "friend" %>
+  <%= f.label :person_told, "A friend" %>
+  <%= f.radio_button :person_told, "principal" %>
+  <%= f.label :person_told, "A principal" %>
+  <%= f.radio_button :person_told, "nobody" %>
+  <%= f.label :person_told, "Nobody" %>
+  <h1>Who did this happen to?</h1>
+  <%= f.radio_button :happened_to, "me" %>
+  <%= f.label :person_told, "Me" %>
+  <%= f.radio_button :happened_to, "friend" %>
+  <%= f.label :person_told, "My friend" %>
+  <%= f.radio_button :happened_to, "student" %>
+  <%= f.label :person_told, "My student" %>
+  <%= f.radio_button :happened_to, "child" %>
+  <%= f.label :person_told, "My child" %>
+  <%= f.submit "Create" %>
+<% end %>
