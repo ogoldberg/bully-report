@@ -12,3 +12,5 @@
         <dt>Types of Bullying:</dt><dd><canvas id="schoolChart" width="300" height="300"></canvas></dd>
     </dl>
 </div>
+<%= @school.phone %>
+<%= button_to "Report bullying", "#{@school.id}/reports/new", :class => "btn", :method => :get %>
