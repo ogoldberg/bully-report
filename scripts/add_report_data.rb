@@ -14,6 +14,7 @@ def create_reports_for_school(school)
     report.person_told = told.sample
     report.grade = rand(1..12).to_s
     report.save()
+    i++
   end
 end
 
