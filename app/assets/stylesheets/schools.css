@@ -1,0 +1,21 @@
+/* Legend for the Schools Graph */
+.physicalBox, .verbalBox{
+    width:20px;
+    height:20px;
+    border:1px solid #333;
+    display:block;
+    text-indent:30px;
+}
+.physicalBox{
+    background-color:green;
+}
+.verbalBox{
+    background-color:orange;
+}
+.leftIndent {
+    border:none;
+    width:50px;
+    text-align:center;
+    text-indent:0;
+    color:#fff;
+}
