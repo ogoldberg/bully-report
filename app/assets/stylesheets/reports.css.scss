@@ -8,7 +8,6 @@
 		width: 100%;
 		padding: 0;
 		margin: .5em 0;
-		line-height: 3;
 	}
 	h2 {
 		text-align: center;
@@ -16,6 +15,10 @@
 	label {
 		display: block;
 		background: #faa732;
+		line-height: 3 !important;
+	}
+	.btn-success {
+		padding: 15px 0;
 	}
 
 	label.active, label.selected {
