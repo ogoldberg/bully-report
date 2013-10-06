@@ -17,7 +17,14 @@ $( ->
         # Ensure the callback is called with scope.
         navigator.geolocation.getCurrentPosition((pos) =>
           @createMap(pos)
+        , =>
+          @createMap({coords:{latitude:"40.73006656461409", longitude: "-73.99033229194333"}})
         )
+
+      _that = @
+      $("#map-search").on "submit", ->
+        _that.searchForLocation.call(_that)
+        return false
 
       # This can only be called once - overwrite the init property so running it
       # again doesn't do anyhing.
@@ -27,10 +34,18 @@ $( ->
     # type an address. This method takes that address and creates a new map,
     # centered.
     searchForLocation: ->
-      createMap()
+      @createMap if @map is null
+      address = $("#map-address").val()
+      geocoder = new google.maps.Geocoder();
+      geocoder.geocode(
+        { 'address': address },
+        (results, status) =>
+          if (status == google.maps.GeocoderStatus.OK)
+            @map.setCenter(results[0].geometry.location)
+            @loadSchools()
+      );
 
     createMap: (pos) ->
-      debugger
       $("#gmap").css({ height: window.innerHeight - 70 })
       @map = new google.maps.Map(document.getElementById('gmap'),
         center: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
