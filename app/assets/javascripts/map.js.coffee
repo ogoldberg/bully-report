@@ -12,13 +12,14 @@ $( ->
 
     # Adds the google maps API and initialises the rest of the maps routines.
     init: ->
+      # Create a map centered in new york
+      @createMap({coords:{latitude:"40.73006656461409", longitude: "-73.99033229194333"}})
       # Create the map.
       if navigator.geolocation
         # Ensure the callback is called with scope.
         navigator.geolocation.getCurrentPosition((pos) =>
-          @createMap(pos)
-        , =>
-          @createMap({coords:{latitude:"40.73006656461409", longitude: "-73.99033229194333"}})
+          @map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude))
+          @loadSchools()
         )
 
       _that = @
@@ -45,6 +46,7 @@ $( ->
             @loadSchools()
       );
 
+    # Creates the google map
     createMap: (pos) ->
       $("#gmap").css({ height: window.innerHeight - 70 })
       @map = new google.maps.Map(document.getElementById('gmap'),
@@ -52,11 +54,11 @@ $( ->
         zoom: 13,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       )
-
+      # After dragging, load new schools
       google.maps.event.addListener(@map, 'dragend', =>
         @loadSchools()
       )
-
+      # And load schools immediately
       @loadSchools()
 
       # Now, we need to post for schools around the current area.
