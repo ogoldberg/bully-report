@@ -16,6 +16,12 @@
 #
 
 class School < ActiveRecord::Base
+   acts_as_mappable :default_units => :miles,
+                    :default_formula => :sphere,
+                    :distance_field_name => :distance,
+                    :lat_column_name => :lat,
+                    :lng_column_name => :lng
+
   has_many :reports
   def self.parse_xml(school_xml)
     School.new({
@@ -29,4 +35,17 @@ class School < ActiveRecord::Base
       lng: school_xml.xpath("lng").text
     })
   end
+
+  # Allows us to set num_reports to the model dynamically when searching 
+  # - this is needed to show hitmaps
+  def num_results()
+    self.reports.count()
+  end
+
+  def as_json(*args)
+    super(*args).merge({
+        :num_results => self.num_results()
+    })
+  end
+
 end

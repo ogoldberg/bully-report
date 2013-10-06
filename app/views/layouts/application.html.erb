@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Judson' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alike+Angular' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -20,14 +22,15 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="/search">Schools</a></li>
-              <li><a href="/report">Report</a></li>
+              <li><a href="/map">Map</a></li>
+              <li><a href="/reports">Report</a></li>
             </ul>
           </div><!--/.nav-collapse -->  
-          <a href="/report" class="btn btn-warning pull-right visible-desktop usreport">
+          <a href="/reports" class="btn btn-warning pull-right visible-desktop usreport">
              View US Report
           </a>
           <a href="/search" class="btn btn-danger pull-right visible-desktop">
-            <i class="icon-eye-open icon-white"></i> Report Bullying Now!
+            Report Bullying
           </a>
         </div>
       </div>
@@ -41,5 +44,6 @@
 
 
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=visualization"></script>
 </body>
 </html>
