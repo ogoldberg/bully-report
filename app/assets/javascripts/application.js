@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require modernizr
+//= require Chart
 //= require_tree .
