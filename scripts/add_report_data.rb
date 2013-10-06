@@ -8,13 +8,13 @@ def create_reports_for_school(school)
   num = rand(0..25)
   i = 0
   while i <= num do
-    report = Report.new()
+    report = Report.new
     report.school = school
     report.type_of_bullying = types.sample
     report.person_told = told.sample
     report.grade = rand(1..12).to_s
     report.save()
-    i++
+    i += 1
   end
 end
 
@@ -27,4 +27,6 @@ end
 #
 # School.find_each(batch_size: 1000) { |school| create_reports_for_school(school) }
 
-School.take(1000).each() { |school| create_reports_for_school(school) }
+School.take(1000).each do |school| 
+  create_reports_for_school(school)
+end
