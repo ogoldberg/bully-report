@@ -20,6 +20,22 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+Merge master into production branch
+
+git push origin production
+
+cap deploy
+
+You'll have to enter the password for deploy one time. It's on the white piece of paper
+
+Then ssh into the server and run:
+
+sudo /etc/init.d/nginx restart
+
+enter same password for deploy. 
+
+You should be good to go! 
+
 
 * ...
 
