@@ -22,7 +22,8 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="/search">Schools</a></li>
-              <li><a href="/report">Report</a></li>
+              <li><a href="/map">Map</a></li>
+              <li><a href="/reports">Report</a></li>
             </ul>
           </div><!--/.nav-collapse -->  
           <a href="/map" class="btn btn-warning pull-right visible-desktop usreport">
@@ -43,5 +44,6 @@
 
 
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=visualization"></script>
 </body>
 </html>
