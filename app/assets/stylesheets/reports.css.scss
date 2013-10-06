@@ -1,3 +1,31 @@
 // Place all the styles related to the reports controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#new_report {
+	label, .btn-success {
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: .5em 0;
+		line-height: 3;
+	}
+	h2 {
+		text-align: center;
+	}
+	label {
+		display: block;
+		background: #faa732;
+	}
+
+	label.active, label.selected {
+		background: darken(#faa732, 15);
+		color: #fff;
+		text-shadow: 0 0 1px rgba(0,0,0,0.4);
+	}
+
+	input[type='radio'] {
+		display: none
+	}
+
+}

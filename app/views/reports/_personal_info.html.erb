@@ -1,30 +1,30 @@
-<div class='btn-group' data-toggle="buttons-radio">
+<div class='btn-group span4  offset4' data-toggle="buttons-radio">
   <%= form_for @report, :url => { :action => "create" } do |f| %>
-    <h1>What happened?</h1>
+    <h2>What happened?</h2>
     <%= f.radio_button :type_of_bullying, "physical" %>
-    <%= f.label :type_of_bullying, "Physical violence" %>
+    <%= f.label :type_of_bullying_physical, "Physical violence", :class => "btn" %>
     <%= f.radio_button :type_of_bullying, "verbal" %>
-    <%= f.label :type_of_bullying, "Teasing" %>
-    <h1>Who have you told?</h1>
+    <%= f.label :type_of_bullying_verbal, "Teasing", :class => "btn" %>
+    <h2>Who have you told?</h2>
     <%= f.radio_button :person_told, "teacher" %>
-    <%= f.label :person_told, "A teacher" %>
+    <%= f.label :person_told_teacher, "A teacher", :class => "btn" %>
     <%= f.radio_button :person_told, "parent" %>
-    <%= f.label :person_told, "A parent" %>
+    <%= f.label :person_told_parent, "A parent", :class => "btn" %>
     <%= f.radio_button :person_told, "friend" %>
-    <%= f.label :person_told, "A friend" %>
+    <%= f.label :person_told_friend, "A friend", :class => "btn" %>
     <%= f.radio_button :person_told, "principal" %>
-    <%= f.label :person_told, "A principal" %>
+    <%= f.label :person_told_principal, "A principal", :class => "btn" %>
     <%= f.radio_button :person_told, "nobody" %>
-    <%= f.label :person_told, "Nobody" %>
-    <h1>Who did this happen to?</h1>
+    <%= f.label :person_told_nobody, "Nobody", :class => "btn" %>
+    <h2>Who did this happen to?</h2>
     <%= f.radio_button :happened_to, "me" %>
-    <%= f.label :happened_to, "Me" %>
+    <%= f.label :happened_to_me, "Me", :class => "btn" %>
     <%= f.radio_button :happened_to, "friend" %>
-    <%= f.label :happened_to, "My friend" %>
+    <%= f.label :happened_to_friend, "My friend", :class => "btn" %>
     <%= f.radio_button :happened_to, "student" %>
-    <%= f.label :happened_to, "My student" %>
+    <%= f.label :happened_to_student, "My student", :class => "btn" %>
     <%= f.radio_button :happened_to, "child" %>
-    <%= f.label :happened_to, "My child" %>
-    <%= f.submit "Create" %>
+    <%= f.label :happened_to_child, "My child", :class => "btn" %>
+    <%= f.submit "Create", :class => "btn btn-success" %>
   <% end %>
 </div>
