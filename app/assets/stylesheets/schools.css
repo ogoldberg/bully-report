@@ -7,10 +7,10 @@
     text-indent:30px;
 }
 .physicalBox{
-    background-color:green;
+    background-color:blue;
 }
 .verbalBox{
-    background-color:orange;
+    background-color:burlywood;
 }
 .leftIndent {
     border:none;

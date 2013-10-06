@@ -1,4 +1,7 @@
-
+<script>
+    var phy = <%= @school.reports.where(type_of_bullying:"Physical").count %>;
+    var emo = <%= @school.reports.where(type_of_bullying:"Emotional").count %>
+</script>
 <!-- TODO: Add graphs and nation school ranking -->
 <div id="singleSchoolContainer" class="container">
 <h1><%= @school.name %></h1>
@@ -7,10 +10,9 @@
         <dt>Address:</dt><dd><%= @school.address.html_safe %></dd>
         <dt>Phone:</dt><dd><%= @school.phone %></dd>
         <dt>National Ranking:</dt><dd> - coming soon - </dd>
-        <dt>Physical Incidents:</dt><dd class="physicalBox leftIndent">30</dd>
-        <dt>Verbal Incidents:</dt><dd class="verbalBox leftIndent">70</dd>
+        <dt>Physical Incidents:</dt><dd class="physicalBox leftIndent"><%= @school.reports.where(type_of_bullying:"Physical").count %></dd>
+        <dt>Verbal Incidents:</dt><dd class="verbalBox leftIndent"><%= @school.reports.where(type_of_bullying:"Emotional").count %></dd>
         <dt>Types of Bullying:</dt><dd><canvas id="schoolChart" width="300" height="300"></canvas></dd>
     </dl>
 </div>
-<%= @school.phone %>
 <%= button_to "Report bullying", "#{@school.id}/reports/new", :class => "btn", :method => :get %>

@@ -4,12 +4,12 @@ $(function(){
         var ctx = document.getElementById("schoolChart").getContext("2d");
         var data = [
             {
-                    value : 30,
-                    color: "green"
+                    value : phy,
+                    color: "blue"
             },
             {
-                    value : 70,
-                    color: "orange"
+                    value : emo,
+                    color: "burlywood"
             }
         ];
         var myNewChart = new Chart(ctx).Pie(data);
