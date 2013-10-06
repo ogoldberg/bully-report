@@ -1,7 +1,7 @@
 class ReportsController < ApplicationController
 
   def index
-    @index = Report.all.limit(20)
+    @reports = Report.all.limit(20)
   end
 
   def show
