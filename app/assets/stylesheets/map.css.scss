@@ -4,8 +4,13 @@
 #gmap {
 	width: 100%;
 	height: 500px;
+	margin: 0;
 }
 
 #map-search {
   padding-bottom: 10px
+}
+
+#gmap.home {
+	height: 100px;
 }

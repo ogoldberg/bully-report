@@ -48,9 +48,11 @@ $(function() {
       },
       createMap: function(pos) {
         var _this = this;
-        $("#gmap").css({
-          height: window.innerHeight - 70
-        });
+        if ($("#gmap").hasClass("small") == false) {
+          $("#gmap").css({
+            height: window.innerHeight - 70
+          });
+        }
         this.map = new google.maps.Map(document.getElementById('gmap'), {
           center: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
           zoom: 13,
@@ -158,7 +160,8 @@ $(function() {
           this.heatmap.setMap(null);
         }
         this.heatmap = new google.maps.visualization.HeatmapLayer({
-          data: heatmapData
+          data: heatmapData,
+          radius: 20
         });
 
         // assign all the markers to the markerCluster using the markers Array
