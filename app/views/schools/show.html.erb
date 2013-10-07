@@ -1,8 +1,8 @@
 <script>
-    var phy = <%= @school.reports.where(type_of_bullying:"Physical").count %>;
+    var phy = <%= @school.reports.where(type_of_bullying:"physical").count %>;
     var verb = <%= @school.reports.where(type_of_bullying:"Verbal").count %>
-    var online = <%= @school.reports.where(type_of_bullying:"Online/Cyber").count %>
-    var oth = <%= @school.reports.where(type_of_bullying:"Other").count %>
+    var online = <%= @school.reports.where(type_of_bullying:"online/cyber").count %>
+    var oth = <%= @school.reports.where(type_of_bullying:"other").count %>
 </script>
 <!-- TODO: Add graphs and nation school ranking -->
 <div id="singleSchoolContainer" class="container">
@@ -12,10 +12,10 @@
         <dt>Address:</dt><dd><%= @school.address.html_safe %></dd>
         <dt>Phone:</dt><dd><%= @school.phone %></dd>
         <dt>National Ranking:</dt><dd> - coming soon - </dd>
-        <dt>Physical Incidents:</dt><dd class="physicalBox leftIndent"><%= @school.reports.where(type_of_bullying:"Physical").count %></dd>
-        <dt>Verbal Incidents:</dt><dd class="verbalBox leftIndent"><%= @school.reports.where(type_of_bullying:"Verbal").count %></dd>
-        <dt>Cyber Incidents:</dt><dd class="onlineBox leftIndent"><%= @school.reports.where(type_of_bullying:"Online/Cyber").count %></dd>
-        <dt>Other Bullying Incidents:</dt><dd class="otherBox leftIndent"><%= @school.reports.where(type_of_bullying:"Other").count %></dd>
+        <dt>Physical Incidents:</dt><dd class="physicalBox leftIndent"><%= @school.reports.where(type_of_bullying:"physical").count %></dd>
+        <dt>Verbal Incidents:</dt><dd class="verbalBox leftIndent"><%= @school.reports.where(type_of_bullying:"verbal").count %></dd>
+        <dt>Cyber Incidents:</dt><dd class="onlineBox leftIndent"><%= @school.reports.where(type_of_bullying:"online/cyber").count %></dd>
+        <dt>Other Bullying Incidents:</dt><dd class="otherBox leftIndent"><%= @school.reports.where(type_of_bullying:"other").count %></dd>
         <dt>Types of Bullying:</dt><dd><canvas id="schoolChart" width="300" height="300"></canvas></dd>
     </dl>
 </div>

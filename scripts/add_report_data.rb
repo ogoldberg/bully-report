@@ -1,8 +1,8 @@
 # Creates a random number of reports for the given school
 #
 def create_reports_for_school(school)
-  types = ["Physical", "Online/Cyber", "Verbal", "Emotional", "Other"]
-  told  = ["Teacher", "Parent", "Friend", "Principle", "Nobody"]
+  types = ["physical", "online/cyber", "verbal", "emotional", "other"]
+  told  = ["teacher", "parent", "friend", "principle", "nobody"]
 
   # Create a random number of reports for a school
   num = rand(0..25)
