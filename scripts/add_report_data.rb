@@ -28,8 +28,8 @@ end
 # 
 ## Uncomment this line to add records for all schools
 #
-# School.find_each(batch_size: 1000) { |school| create_reports_for_school(school) }
+School.find_each(batch_size: 1000) { |school| create_reports_for_school(school) }
 
-School.take(1000).each do |school| 
-  create_reports_for_school(school)
-end
+#School.take(1000).each do |school| 
+#  create_reports_for_school(school)
+#end

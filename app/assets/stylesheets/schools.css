@@ -12,6 +12,12 @@
 .verbalBox{
     background-color:burlywood;
 }
+.otherBox{
+    background-color:green;
+}
+.onlineBox{
+    background-color:grey;
+}
 .leftIndent {
     border:none;
     width:50px;

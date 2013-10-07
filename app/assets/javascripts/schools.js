@@ -8,8 +8,16 @@ $(function(){
                     color: "blue"
             },
             {
-                    value : emo,
+                    value : verb,
                     color: "burlywood"
+            },
+            {
+                    value : online,
+                    color: "green"
+            },
+            {
+                    value : oth,
+                    color: "grey"
             }
         ];
         var myNewChart = new Chart(ctx).Pie(data);

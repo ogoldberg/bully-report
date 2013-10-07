@@ -137,7 +137,7 @@ $(function() {
           google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
                 var s_content = '<div style="padding:10px"><strong>'+i['name']+'</strong><br/><p>'+i['address']+'</p><p>'+i['phone']+'</p>';
-                if(i['num_results'] > 0) {
+                if(i['num_reports'] > 0) {
                     s_content += "<p><a href='/schools/"+i['id']+"'>View Report</a></p>";
                 }else{
                     s_content += "<p>No reports on file.</p>";
