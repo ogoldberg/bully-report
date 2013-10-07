@@ -30,6 +30,6 @@ end
 #
 # School.find_each(batch_size: 1000) { |school| create_reports_for_school(school) }
 
-School.take(5000).each do |school| 
+School.take(1000).each do |school| 
   create_reports_for_school(school)
 end
